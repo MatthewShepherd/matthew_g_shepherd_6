@@ -5,6 +5,7 @@ class Dancer
      def initialize(nm, age)
      @name = nm
      @age = age
+     @card = []
      end
 
      def pirouette
@@ -13,6 +14,10 @@ class Dancer
 
      def bow
      	p "*bows*"
+     end
+
+     def que_dance_with(person)
+     	@card << person
      end
 end
 
