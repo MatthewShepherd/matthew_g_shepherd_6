@@ -1,5 +1,5 @@
 class Dancer
-	 attr_reader :name
+	 attr_reader :name, :card
 	 attr_accessor :age
 
      def initialize(nm, age)
@@ -16,8 +16,13 @@ class Dancer
      	p "*bows*"
      end
 
-     def que_dance_with(person)
-     	@card << person
+     def queue_dance_with(person)
+     	@card << person     	
+     end
+
+     def begin_next_dance
+       p "Now dancing with #{card[0]}."
+       card.delete(0)
      end
 end
 
